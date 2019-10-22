@@ -5,15 +5,14 @@
     "ng": "ng",
     "start": "ng serve --port=900",
     "build": "ng build",
-    "test": "ng test --port=900",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ng test",
-      "pre-push": "ng test",
-      "...": "..."
+      "pre-commit": "npm run test",
+      "pre-push": "test"
     }
   },
   "private": true,
